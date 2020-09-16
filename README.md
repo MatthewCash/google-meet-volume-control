@@ -8,7 +8,7 @@ Coming Soon
 
 ## Manual Installation from Releases
 
-Visit the [Releases Page](https://github.com/MatthewCash/google-meet-volume/releases) and follow the provided instructions
+Visit the [Releases Page](https://github.com/MatthewCash/google-meet-volume-control/releases) and follow the provided instructions
 
 ## Unpacked Installation Instructions (Not Recommended)
 
