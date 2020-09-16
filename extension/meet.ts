@@ -2,9 +2,10 @@
     let volume = 1;
 
     const setAllVolume = (volume: number) => {
+        const adjustedVolume = volume ** 2.5;
         document
             .querySelectorAll('audio')
-            .forEach(el => (el.volume = volume ?? 1));
+            .forEach(el => (el.volume = adjustedVolume ?? 1));
     };
 
     chrome.storage.sync.get(['volume'], res => void (volume = res.volume ?? 1));
