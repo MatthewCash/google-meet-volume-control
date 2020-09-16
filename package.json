@@ -1,0 +1,17 @@
+{
+    "name": "google-meet-volume",
+    "version": "1.0.0",
+    "description": "Allows adjustment of Google Meet volume",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc && crx3 -z extension.zip extension"
+    },
+    "author": "Matthew_Cash",
+    "license": "ISC",
+    "dependencies": {
+        "@types/chrome": "^0.0.123",
+        "crx3": "^1.1.2",
+        "typescript": "^4.0.2"
+    }
+}

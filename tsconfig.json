@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "lib": ["dom", "esnext"]
+    },
+    "compileOnSave": false
+}
