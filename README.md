@@ -4,7 +4,7 @@ Allows a global volume to be set for all Meet participants (client side)
 
 ## Installation with Chrome Web Store
 
-Coming Soon
+Visit the [Chrome Web Store Listing](https://chrome.google.com/webstore/detail/google-meet-volume-contro/nkbnlgonoekhmldnihfdpakhhjhmdkbd)
 
 ## Manual Installation from Releases
 
