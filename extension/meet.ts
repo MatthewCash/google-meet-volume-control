@@ -4,7 +4,7 @@
     const setAllVolume = (volume: number) => {
         const adjustedVolume = volume ** 2.5;
         document
-            .querySelectorAll('audio')
+            .querySelectorAll<HTMLMediaElement>('audio, video')
             .forEach(el => (el.volume = adjustedVolume ?? 1));
     };
 
