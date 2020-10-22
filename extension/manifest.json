@@ -6,7 +6,7 @@
     "name": "Google Meet Volume Control",
     "short_name": "Meet Volume",
     "description": "Allows adjustment of Google Meet volume",
-    "version": "1.1.0",
+    "version": "1.1.1",
 
     "permissions": ["storage", "background", "declarativeContent"],
     "background": {
