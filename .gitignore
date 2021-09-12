@@ -8,8 +8,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Production Assets
-extension.zip
-extension.crx
+extension*.zip
+extension*.crx
 
 yarn.lock
 
