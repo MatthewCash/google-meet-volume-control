@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "lib": ["dom", "esnext"]
+        "lib": ["dom", "esnext"],
+        "typeRoots": ["node_modules/@types", "node_modules/web-ext-types"],
+        "esModuleInterop": true
     },
     "compileOnSave": false
 }

@@ -1,3 +1,5 @@
+import browser from 'webextension-polyfill';
+
 let volume = 1;
 
 // Throttle function from StackOverflow (https://stackoverflow.com/questions/27078285/simple-throttle-in-js)
@@ -27,14 +29,13 @@ const setNewVolume = (newVolume: number) => {
 
     volume = newVolume;
 
-    document.querySelector<HTMLSpanElement>(
-        '#volume-display'
-    ).textContent = String(Math.round(newVolume * 100));
+    document.querySelector<HTMLSpanElement>('#volume-display').textContent =
+        String(Math.round(newVolume * 100));
     saveVolume();
 };
 
 const saveVolume = throttle(() => {
-    chrome.storage.sync.set({ volume });
+    browser.storage.sync.set({ volume });
 }, 200);
 
 document
@@ -45,7 +46,7 @@ document
         setNewVolume(newVolume);
     });
 
-chrome.storage.sync.get(['volume'], res => {
+browser.storage.sync.get(['volume']).then(res => {
     console.log('Setting volume to first ', res.volume);
     setNewVolume(res.volume ?? 1);
     document.querySelector<HTMLInputElement>('#volume').value = res.volume ?? 1;

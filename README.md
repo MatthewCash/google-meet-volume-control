@@ -10,15 +10,16 @@ Visit the [Chrome Web Store Listing](https://chrome.google.com/webstore/detail/g
 
 Visit the [Releases Page](https://github.com/MatthewCash/google-meet-volume-control/releases) and follow the provided instructions
 
-## Unpacked Installation Instructions (Not Recommended)
+## Manual Build & Installation
 
-1. Clone Repo
-2. Install Dependencies and Compile Typescript
+### With Nix (Firefox only)
 
-```sh
-npm i && tsc
-```
+1. Run `nix build`
+2. Load addon from `./result/extension/meet-volume-control.zip`
 
-3. Navigate to Extensions Page (chrome://extensions)
-4. Enable Developer Mode
-5. Select "Load unpacked" and provide the "extension" folder
+### Manually
+
+1. Install dependencies with `npm install`
+2. Build for your browser with `npm run build:firefox` or `npm run build:chrome`
+3. Pack into zip with `npm run pack`
+4. Load addon from `./ext-out/meet-volume-control.zip`

@@ -1,0 +1,26 @@
+{
+    "{{chrome}}.manifest_version": 3,
+    "{{firefox}}.manifest_version": 2,
+    "{{firefox}}.browser_specific_settings": {
+        "gecko": {
+            "id": "meet-volume-control@matthew-cash.com"
+        }
+    },
+    "{{chrome}}.action": {
+        "default_popup": "src/popup/popup.html"
+    },
+    "{{firefox}}.browser_action": {
+        "default_popup": "src/popup/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://meet.google.com/*"],
+            "js": ["src/js/meet.ts"]
+        }
+    ],
+    "background": {
+        "{{chrome}}.service_worker": "src/js/background.ts",
+        "{{firefox}}.scripts": ["src/js/background.ts"]
+    },
+    "permissions": ["storage", "background", "declarativeContent"]
+}
