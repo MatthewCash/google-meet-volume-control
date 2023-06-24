@@ -22,3 +22,22 @@ browser.storage.onChanged.addListener(changes => {
 setInterval(() => {
     setAllVolume(volume);
 }, 100);
+
+// Other scripts may change the volume back to 1 causing a volume bump before the interval sets it back to the desired volume. https://github.com/MatthewCash/google-meet-volume-control/issues/1 This attempts to fix the issue, but very short bumps may still be heard.
+const observer = new MutationObserver(mutationList =>
+    mutationList.forEach(mutation =>
+        Array.from(mutation.addedNodes)
+            .filter(node => node instanceof HTMLMediaElement)
+            .forEach((element: HTMLMediaElement) => {
+                element.volume = volume;
+                element.addEventListener('volumechange', function () {
+                    if (this.volume !== volume ** 2.5)
+                        this.volume = volume ** 2.5;
+                });
+            })
+    )
+);
+
+observer.observe(document.body, {
+    childList: true
+});
