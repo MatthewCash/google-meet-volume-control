@@ -1,4 +1,6 @@
 {
+    "name": "Google Meet Volume Control",
+    "short_name": "Meet Volume",
     "{{chrome}}.manifest_version": 3,
     "{{firefox}}.manifest_version": 2,
     "{{firefox}}.browser_specific_settings": {
