@@ -5525,7 +5525,7 @@ let
   args = {
     name = "meet-volume-control";
     packageName = "meet-volume-control";
-    version = "1.1.1";
+    version = "1.2.0";
     src = ./.;
     dependencies = [
       sources."@adobe/css-tools-4.2.0"
