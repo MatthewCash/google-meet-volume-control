@@ -6,14 +6,15 @@
     "type": "module",
     "scripts": {
         "test": "web-ext lint -s ./dist",
-        "build:firefox": "TARGET=firefox vite build",
-        "build:chrome": "TARGET=chrome vite build",
+        "build:firefox": "cross-env TARGET=firefox vite build",
+        "build:chrome": "cross-env TARGET=chrome vite build",
         "pack": "web-ext build -s ./dist -o -a ext-out -n meet-volume-control.zip"
     },
     "author": "Matthew_Cash",
     "license": "GPLv3-only",
     "dependencies": {
         "@types/webextension-polyfill": "^0.10.0",
+        "cross-env": "^7.0.3",
         "vite": "^4.3.9",
         "vite-plugin-web-extension": "^3.0.9",
         "web-ext": "^7.6.2",
